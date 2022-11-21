@@ -1,0 +1,615 @@
+{
+    "dataset": {
+        "id": "coypu-kg-questions-all"
+    },
+    "questions": [
+        {
+            "id": "0",
+            "question": [
+                {
+                    "string": "Does Tokyo have a sea port?",
+                    "language": "en"
+                },
+                {
+                    "string": "Hat Tokio einen Seehafen?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "1",
+            "question": [
+                {
+                    "string": "How many sea ports are there in China?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Seehafen gibt es in China?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "2",
+            "question": [
+                {
+                    "string": "When was the last earthquake in Indonesia?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wann gab es das letzte Erdbeben in Indonesien?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "3",
+            "question": [
+                {
+                    "string": "What are the last three natural disasters with level red?",
+                    "language": "en"
+                },
+                {
+                    "string": "Welches sind die letzten drei Naturkatastrophen mit Level rot?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "4",
+            "question": [
+                {
+                    "string": "How many Tsunamis occured in 2021?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Tsunami gab es 2021?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "5",
+            "question": [
+                {
+                    "string": "How many disasters happened in 2021 with level 1 or orange?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Krisen mit einer Warnmeldung 1 oder orange gab es 2021?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "6",
+            "question": [
+                {
+                    "string": "How many earthquakes happened in China since 2019?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Erdbeben gab es seit 2019 in China?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "7",
+            "question": [
+                {
+                    "string": "Is there an airport in Kandahar?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gibt es einen Flughafen in Kandahar?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "8",
+            "question": [
+                {
+                    "string": "What is the IATA Code of the International Airport in Los Angeles?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie ist der IATA Code f\u00fcr den Internationalen Flughafen von Los Angeles?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "9",
+            "question": [
+                {
+                    "string": "Which is the largest port in India in terms of cargo throughput?",
+                    "language": "en"
+                },
+                {
+                    "string": "Welches ist der gr\u00f6\u00dfte Hafen in Indien gemessen am Frachtumschlag?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "10",
+            "question": [
+                {
+                    "string": "How many seaports are located in Europe?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Seeh\u00e4fen gibt es in Europa?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "11",
+            "question": [
+                {
+                    "string": "What capacity does the biggest powerplant in Japan have?",
+                    "language": "en"
+                },
+                {
+                    "string": "Welche Kapazit\u00e4t hat das gr\u00f6\u00dfte Kraftwerk in Japan?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "12",
+            "question": [
+                {
+                    "string": "How many power plants in India work with gas?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Gas-Kraftwerke gibt es in Indien?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "13",
+            "question": [
+                {
+                    "string": "What was the most recent Disaster that struck in Switzerland?",
+                    "language": "en"
+                },
+                {
+                    "string": "Was war das letzte katastrophen Ereignis in der Schweiz?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "14",
+            "question": [
+                {
+                    "string": "In which countries are active wildfires?",
+                    "language": "en"
+                },
+                {
+                    "string": "In welchen L\u00e4ndern gibt es aktuell Waldbr\u00e4nde?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "15",
+            "question": [
+                {
+                    "string": "What countries were plagued by droughts in 2021?",
+                    "language": "en"
+                },
+                {
+                    "string": "In welchen L\u00e4ndern gab es 2021 eine D\u00fcrre?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "16",
+            "question": [
+                {
+                    "string": "Is there an active natural disaster in Japan?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gibt es in Japan aktuell eine Naturkatastrophe?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "17",
+            "question": [
+                {
+                    "string": "How many companies based in Cologne have more than 10000 employees?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Unternehmen in K\u00f6ln haben mehr als 10.000 Mitarbeiter?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "18",
+            "question": [
+                {
+                    "string": "Are there more companies in Munich with a size of \"small\" than \"micro\"?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gibt es in M\u00fcnchen mehr Unternehmen der Gr\u00f6\u00dfe small als micro?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "19",
+            "question": [
+                {
+                    "string": "What is the phone number of the biggest company (by number of employees) based in Hamburg?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie lautet die Telefonnummer des gr\u00f6\u00dften Unternehmens (nach Anzahl an Mitarbeitern) in Hamburg?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "20",
+            "question": [
+                {
+                    "string": "Get the EBID-Code of all companies with more than 100,000 employees.",
+                    "language": "en"
+                },
+                {
+                    "string": "Gib mir den EBID-Code von allen Unternehmen mit mehr als 100.000 Mitarbeitern.",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "21",
+            "question": [
+                {
+                    "string": "Which companies are in the area of the Zip Code 78604?",
+                    "language": "en"
+                },
+                {
+                    "string": "Welche Unternehmen gibt es im Bereich der Postleitzahl 78604?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "22",
+            "question": [
+                {
+                    "string": "Can Afghanistan create more energy through hydropower or thorugh solar power?",
+                    "language": "en"
+                },
+                {
+                    "string": "Kann in Afghanistan mehr Energie aus Wasserkraft oder Solarkraft erzeugt werden?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "23",
+            "question": [
+                {
+                    "string": "How many emergencies have happenend in Australia since the 2022-01-01?",
+                    "language": "en"
+                },
+                {
+                    "string": "How many emergencies have happenend in Australia since the 2022-01-01?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "24",
+            "question": [
+                {
+                    "string": "Was there an crisis in 2021 that hit both Germany and the Netherlands at the same time?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gab es 2021 eine Notlage die Deutschland und die Niederlande betraf?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "25",
+            "question": [
+                {
+                    "string": "Does the DELO Industrie Klebstiffe GmbH & Co. KGaA have a supplier that is also a customer of theirs?",
+                    "language": "en"
+                },
+                {
+                    "string": "Hat die DELO Industrie Klebstoffe GmbH & Co. KGaA einen Lieferanten der auch gleichzeitig ihr Kunde ist?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "26",
+            "question": [
+                {
+                    "string": "List all the protests that happened in June of 2022 in Costa Rica.",
+                    "language": "en"
+                },
+                {
+                    "string": "Liste mir alle Proteste in Costa Rica im Juni 2022 auf.",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "27",
+            "question": [
+                {
+                    "string": "When was the latest piece of news about russia published on \"bloomberg.com\"?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wann gab es die neuesten Nachrichten \u00fcber Russland auf \"bloomberg.com\"?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "28",
+            "question": [
+                {
+                    "string": "How many floods happened in Haiti?",
+                    "language": "en"
+                },
+                {
+                    "string": "Von wie vielen Fluten war Haiti betroffen?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "29",
+            "question": [
+                {
+                    "string": "How many micro companies are based in Germany?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Mikro-Unternehmen gibt es in Deutschland?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "30",
+            "question": [
+                {
+                    "string": "Is there at least one Company in the \"Gotenstra\u00dfe\"?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gibt es mindestend ein Unternehmen in der \"Gotenstra\u00dfe\"?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "31",
+            "question": [
+                {
+                    "string": "Which country was plagued by the most disasters in 2021? ",
+                    "language": "en"
+                },
+                {
+                    "string": "Welches Land hatte die meisten Notlagen im Jahr 2021?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "32",
+            "question": [
+                {
+                    "string": "How many administritative districts does South Korea have?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele administrative Bezirke hat S\u00fcdkorea?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "33",
+            "question": [
+                {
+                    "string": "What was the latest piece of news relevant to Madagascar about?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wovon handelte die letzte Madagascar betreffende Nachricht?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "34",
+            "question": [
+                {
+                    "string": "How many news items have been made about Ukraine in June of 2022?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Nachrichten behandelten Ukraine im Juni 2022?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "35",
+            "question": [
+                {
+                    "string": "How many attacks with chemical weapons happened in Brazil in April of 2022?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Angrife mit chemischen Waffen passierten im April 2022 in Brazilien?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "36",
+            "question": [
+                {
+                    "string": "In which country is the Bokeo Province?",
+                    "language": "en"
+                },
+                {
+                    "string": "In welchem Land liegt die Bokeo Province?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        },
+        {
+            "id": "37",
+            "question": [
+                {
+                    "string": "How many nuclear power plants are in Ukraine?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Atomkraftwerke gibt es in der Ukraine?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": []
+            }
+        }
+    ]
+}
