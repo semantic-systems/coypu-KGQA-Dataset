@@ -16,7 +16,8 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "ASK {?subject coy:hasLocation ?country; coy:hasInfrastructureType \"port\"; rdfs:label \"Tokyo\" . ?country rdf:type coy:Country; rdfs:label \"Japan\"@en.}"
             }
         },
         {
@@ -32,11 +33,29 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?port) AS ?result) WHERE {?port coy:hasLocation ?country ; coy:hasInfrastructureType \"port\" . ?country rdf:type coy:Country; skos:altLabel \"China\"@en}"
             }
         },
         {
             "id": "2",
+            "question": [
+                {
+                    "string": "Is there currently a natural disaster in Italy?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gibt es aktuell eine Naturkatastrophe in Italien?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "ASK {?result rdf:type coy:Disaster; coy:hasCountryLocation ?country; coy:hasStartDate ?sd. ?country rdfs:label \"Italy\"@en. FILTER(NOT EXISTS {?result coy:hasEndDate ?ed})} "
+            }
+        },
+        {
+            "id": "3",
             "question": [
                 {
                     "string": "When was the last earthquake in Indonesia?",
@@ -48,43 +67,63 @@
                 }
             ],
             "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "3",
-            "question": [
-                {
-                    "string": "What are the last three natural disasters with level red?",
-                    "language": "en"
-                },
-                {
-                    "string": "Welches sind die letzten drei Naturkatastrophen mit Level rot?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?subject rdf:type coy:Disaster; coy:hasEventType \"EQ\"; coy:hasCountryLocation ?country; coy:hasTimestamp ?result. ?country rdfs:label \"Indonesia\"@en} ORDER BY DESC(?result) LIMIT 1"
             }
         },
         {
             "id": "4",
             "question": [
                 {
-                    "string": "How many Tsunamis occured in 2021?",
+                    "string": "What is the international acronym of Saudi Arabia?",
                     "language": "en"
                 },
                 {
-                    "string": "Wie viele Tsunami gab es 2021?",
+                    "string": "Wie lautet das internationale K\u00fcrzel von Saudi-Arabien?",
                     "language": "de"
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {<https://data.coypu.org/country/SAU> coy:hasIso3Code ?result .}"
             }
         },
         {
             "id": "5",
+            "question": [
+                {
+                    "string": "What are the last three natural disasters with level orange?",
+                    "language": "en"
+                },
+                {
+                    "string": "Welches sind die letzten drei Naturkatastrophen mit Level orange?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?result rdf:type coy:Disaster; coy:hasAlertScore ?as; coy:hasTimestamp ?ts. FILTER(?as = \"2\")} ORDER BY DESC(?ts) LIMIT 3"
+            }
+        },
+        {
+            "id": "6",
+            "question": [
+                {
+                    "string": "What is the risk level of Germany?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie ist das Risiko-Level von Deutschland?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE {<https://data.coypu.org/country/DEU> coy:hasRiskLevel ?result .}"
+            }
+        },
+        {
+            "id": "7",
             "question": [
                 {
                     "string": "How many disasters happened in 2021 with level 1 or orange?",
@@ -96,27 +135,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?dis) AS ?result) WHERE {?dis rdf:type coy:Disaster; coy:hasAlertScore ?as; coy:hasTimestamp ?ts. FILTER((YEAR(xsd:dateTime(?ts)) = 2021) && (?as = \"1\"))}"
             }
         },
         {
-            "id": "6",
-            "question": [
-                {
-                    "string": "How many earthquakes happened in China since 2019?",
-                    "language": "en"
-                },
-                {
-                    "string": "Wie viele Erdbeben gab es seit 2019 in China?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "7",
+            "id": "8",
             "question": [
                 {
                     "string": "Is there an airport in Kandahar?",
@@ -128,11 +152,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "ASK{?ap rdf:type coy:Airport; coy:hasCountry \"Afghanistan\"; coy:hasName ?name. FILTER(regex(?name,\"Kandahar\", \"i\"))}"
             }
         },
         {
-            "id": "8",
+            "id": "9",
             "question": [
                 {
                     "string": "What is the IATA Code of the International Airport in Los Angeles?",
@@ -144,23 +169,8 @@
                 }
             ],
             "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "9",
-            "question": [
-                {
-                    "string": "Which is the largest port in India in terms of cargo throughput?",
-                    "language": "en"
-                },
-                {
-                    "string": "Welches ist der gr\u00f6\u00dfte Hafen in Indien gemessen am Frachtumschlag?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT ?result WHERE{?ap rdf:type coy:Airport;  rdfs:label \"Los Angeles Intl\"; coy:hasId ?result. }"
             }
         },
         {
@@ -176,7 +186,8 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?seaport) AS ?result) WHERE {?seaport rdf:type coy:Port; coy:hasLocation ?country. ?country coy:hasContinent data:continent\\/Europe. }"
             }
         },
         {
@@ -192,11 +203,29 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?pp rdf:type coy:Powerplant;  coy:hasCountryLocation/rdfs:label \"Japan\"@en; coy:hasCapacity ?result} ORDER BY DESC(?result) LIMIT 1"
             }
         },
         {
             "id": "12",
+            "question": [
+                {
+                    "string": "What fuel types does the powerplant HKW West use?",
+                    "language": "en"
+                },
+                {
+                    "string": "Mit welchen Kraftstoffen wird das Kraftwerk HKW West betrieben?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?pp rdf:type coy:Powerplant;  coy:hasName \"HKW West\"; coy:hasFuelType ?result. }"
+            }
+        },
+        {
+            "id": "13",
             "question": [
                 {
                     "string": "How many power plants in India work with gas?",
@@ -208,11 +237,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?pp) AS ?result) WHERE{?pp rdf:type coy:Powerplant; coy:hasFuelType \"Gas\"; coy:hasCountryLocation/rdfs:label \"India\"@en. }"
             }
         },
         {
-            "id": "13",
+            "id": "14",
             "question": [
                 {
                     "string": "What was the most recent Disaster that struck in Switzerland?",
@@ -224,59 +254,29 @@
                 }
             ],
             "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "14",
-            "question": [
-                {
-                    "string": "In which countries are active wildfires?",
-                    "language": "en"
-                },
-                {
-                    "string": "In welchen L\u00e4ndern gibt es aktuell Waldbr\u00e4nde?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?result rdf:type coy:Disaster; coy:hasStartDate ?sd; coy:hasCountryLocation/rdfs:label \"Switzerland\"@en.} ORDER BY DESC(?sd) LIMIT 1"
             }
         },
         {
             "id": "15",
             "question": [
                 {
-                    "string": "What countries were plagued by droughts in 2021?",
+                    "string": "Was there an active natural disaster in Japan on 2021-01-01?",
                     "language": "en"
                 },
                 {
-                    "string": "In welchen L\u00e4ndern gab es 2021 eine D\u00fcrre?",
+                    "string": "Gab es am 01.01.2021 in Japan eine Naturkatastrophe?",
                     "language": "de"
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?dis ?ts ?ts2 WHERE{?dis rdf:type coy:Disaster; coy:hasCountryLocation/rdfs:label \"Japan\"@en; coy:hasTimestamp ?ts. BIND(xsd:date(?ts) AS ?eventDate)  FILTER(?eventDate = xsd:date(\"2021-01-01+00:00\"))}"
             }
         },
         {
             "id": "16",
-            "question": [
-                {
-                    "string": "Is there an active natural disaster in Japan?",
-                    "language": "en"
-                },
-                {
-                    "string": "Gibt es in Japan aktuell eine Naturkatastrophe?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "17",
             "question": [
                 {
                     "string": "How many companies based in Cologne have more than 10000 employees?",
@@ -288,11 +288,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?comp) AS ?result) WHERE{?comp rdf:type coy:Company; coy:hasCity \"K\u00f6ln\"; coy:hasNumberOfEmployees ?size. FILTER(xsd:integer(?size) > 10000)}"
             }
         },
         {
-            "id": "18",
+            "id": "17",
             "question": [
                 {
                     "string": "Are there more companies in Munich with a size of \"small\" than \"micro\"?",
@@ -304,27 +305,29 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "ASK{{SELECT (COUNT (DISTINCT ?comp) AS ?small) WHERE{?comp rdf:type coy:Company; coy:hasCity \"M\u00fcnchen\"; coy:hasCompanySize ?size. FILTER(?size = \"SMALL\")}} {SELECT (COUNT (DISTINCT ?comp) AS ?micro) WHERE{?comp rdf:type coy:Company; coy:hasCity \"M\u00fcnchen\"; coy:hasCompanySize ?size. FILTER(?size = \"MICRO\")}} FILTER(?small > ?micro)}"
             }
         },
         {
-            "id": "19",
+            "id": "18",
             "question": [
                 {
-                    "string": "What is the phone number of the biggest company (by number of employees) based in Hamburg?",
+                    "string": "What is the URL of the biggest company (by number of employees) based in Hamburg?",
                     "language": "en"
                 },
                 {
-                    "string": "Wie lautet die Telefonnummer des gr\u00f6\u00dften Unternehmens (nach Anzahl an Mitarbeitern) in Hamburg?",
+                    "string": "Wie lautet die URL des gr\u00f6\u00dften Unternehmens (nach Anzahl an Mitarbeitern) in Hamburg?",
                     "language": "de"
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?comp rdf:type coy:Company; coy:hasCity \"Hamburg\"; coy:hasNumberOfEmployees ?size; coy:hasUrl ?result} ORDER BY DESC(xsd:integer(?size)) LIMIT 1"
             }
         },
         {
-            "id": "20",
+            "id": "19",
             "question": [
                 {
                     "string": "Get the EBID-Code of all companies with more than 100,000 employees.",
@@ -336,7 +339,25 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?comp rdf:type coy:Company; coy:hasEbidCode ?result; coy:hasNumberOfEmployees ?size.  FILTER(xsd:integer(?size) > 100000)}"
+            }
+        },
+        {
+            "id": "20",
+            "question": [
+                {
+                    "string": "What is the street address of the Deutsche Bahn AG?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie lautet die Adresse der Deutsche Bahn AG?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?comp rdfs:label \"Deutsche Bahn AG\"; coy:hasStreet ?result.}"
             }
         },
         {
@@ -352,7 +373,8 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE{?result rdf:type coy:Company; coy:hasZip \"78604\".} "
             }
         },
         {
@@ -368,23 +390,25 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {{SELECT (SUM(xsd:float(?capS)) AS ?solarSum) WHERE{ ?solar rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Solar\"; coy:hasCapacity ?capS.}} {SELECT (SUM(xsd:float(?capH)) AS ?hydroSum) WHERE {?hydro rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Hydro\"; coy:hasCapacity ?capH. }} BIND(IF((?solarSum >= ?hydroSum), \"Solar\", \"Hydro\") AS ?result)}"
             }
         },
         {
             "id": "23",
             "question": [
                 {
-                    "string": "How many emergencies have happenend in Australia since the 2022-01-01?",
+                    "string": "How many crises have happenend in Australia since the 2022-01-01?",
                     "language": "en"
                 },
                 {
-                    "string": "How many emergencies have happenend in Australia since the 2022-01-01?",
+                    "string": "Wie viele Katastrophen gab es seit dem ersten Januar 2022 in Australien?",
                     "language": "de"
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?emergency) AS ?result) WHERE{ ?emergency rdf:type coy:Disaster; coy:hasTimestamp ?ts; coy:hasCountryLocation/rdfs:label \"Australia\"@en. FILTER(YEAR(xsd:dateTime(?ts)) >= 2022)}"
             }
         },
         {
@@ -400,43 +424,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "ASK{ ?emergency rdf:type coy:Disaster; coy:hasStartDate ?ts; coy:hasCountryLocation ?loc, ?loc2. ?loc rdf:type coy:Country; rdfs:label \"Germany\"@en. ?loc2 rdf:type coy:Country; skos:altLabel \"Netherlands\"@en. FILTER(YEAR(?ts) = 2021)}"
             }
         },
         {
             "id": "25",
-            "question": [
-                {
-                    "string": "Does the DELO Industrie Klebstiffe GmbH & Co. KGaA have a supplier that is also a customer of theirs?",
-                    "language": "en"
-                },
-                {
-                    "string": "Hat die DELO Industrie Klebstoffe GmbH & Co. KGaA einen Lieferanten der auch gleichzeitig ihr Kunde ist?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "26",
-            "question": [
-                {
-                    "string": "List all the protests that happened in June of 2022 in Costa Rica.",
-                    "language": "en"
-                },
-                {
-                    "string": "Liste mir alle Proteste in Costa Rica im Juni 2022 auf.",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "27",
             "question": [
                 {
                     "string": "When was the latest piece of news about russia published on \"bloomberg.com\"?",
@@ -448,27 +441,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Russia\"@en; coy:hasTimestamp ?result; coy:hasUrl ?url. FILTER(regex(?url, \"bloomberg.com\"))} ORDER BY DESC(?result) LIMIT 1"
             }
         },
         {
-            "id": "28",
-            "question": [
-                {
-                    "string": "How many floods happened in Haiti?",
-                    "language": "en"
-                },
-                {
-                    "string": "Von wie vielen Fluten war Haiti betroffen?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "29",
+            "id": "26",
             "question": [
                 {
                     "string": "How many micro companies are based in Germany?",
@@ -480,27 +458,29 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?micro) AS ?result) WHERE {?micro rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"Germany\"@en; coy:hasCompanySize \"MICRO\".}"
             }
         },
         {
-            "id": "30",
+            "id": "27",
             "question": [
                 {
                     "string": "Is there at least one Company in the \"Gotenstra\u00dfe\"?",
                     "language": "en"
                 },
                 {
-                    "string": "Gibt es mindestend ein Unternehmen in der \"Gotenstra\u00dfe\"?",
+                    "string": "Gibt es mindestens ein Unternehmen in der \"Gotenstra\u00dfe\"?",
                     "language": "de"
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "ASK {?comp rdf:type coy:Company; coy:hasStreet ?street. FILTER(regex(?street,\"Gotenstra\u00dfe\"))}"
             }
         },
         {
-            "id": "31",
+            "id": "28",
             "question": [
                 {
                     "string": "Which country was plagued by the most disasters in 2021? ",
@@ -512,27 +492,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {?dis rdf:type coy:Disaster; coy:hasTimestamp ?ts; coy:hasCountryLocation/rdfs:label ?result. FILTER(YEAR(xsd:dateTime(?ts)) = 2021) } GROUP BY(?result) ORDER BY DESC(COUNT (DISTINCT ?dis)) LIMIT 1"
             }
         },
         {
-            "id": "32",
-            "question": [
-                {
-                    "string": "How many administritative districts does South Korea have?",
-                    "language": "en"
-                },
-                {
-                    "string": "Wie viele administrative Bezirke hat S\u00fcdkorea?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "33",
+            "id": "29",
             "question": [
                 {
                     "string": "What was the latest piece of news relevant to Madagascar about?",
@@ -544,27 +509,29 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Madagascar\"@en; coy:hasDescription ?result; coy:hasTimestamp ?ts.} ORDER BY DESC(xsd:dateTime(?ts)) LIMIT 1"
             }
         },
         {
-            "id": "34",
+            "id": "30",
             "question": [
                 {
                     "string": "How many news items have been made about Ukraine in June of 2022?",
                     "language": "en"
                 },
                 {
-                    "string": "Wie viele Nachrichten behandelten Ukraine im Juni 2022?",
+                    "string": "Wie viele Nachrichten behandelten die Ukraine im Juni 2022?",
                     "language": "de"
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?news) AS ?result) WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Ukraine\"@en; coy:hasTimestamp ?ts. FILTER((YEAR(xsd:dateTime(?ts)) = 2022) && (MONTH(xsd:dateTime(?ts)) = 06))} "
             }
         },
         {
-            "id": "35",
+            "id": "31",
             "question": [
                 {
                     "string": "How many attacks with chemical weapons happened in Brazil in April of 2022?",
@@ -576,27 +543,12 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT(DISTINCT ?event) AS ?result) WHERE {?event rdf:type coy:ChemicalWeapon; coy:hasIsoCode ?iso; coy:hasTimestamp ?ts. ?country rdf:type coy:Country; rdfs:label \"Brazil\"@en; coy:hasIso3Code ?iso. FILTER((YEAR(?ts) = 2022) && (MONTH(?ts) = 04))} "
             }
         },
         {
-            "id": "36",
-            "question": [
-                {
-                    "string": "In which country is the Bokeo Province?",
-                    "language": "en"
-                },
-                {
-                    "string": "In welchem Land liegt die Bokeo Province?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "answers": []
-            }
-        },
-        {
-            "id": "37",
+            "id": "32",
             "question": [
                 {
                     "string": "How many nuclear power plants are in Ukraine?",
@@ -608,7 +560,178 @@
                 }
             ],
             "query": {
-                "answers": []
+                "answers": [],
+                "sparql": "SELECT (COUNT (DISTINCT ?pp) AS ?result) WHERE {?pp rdf:type coy:Powerplant; coy:hasFuelType \"Nuclear\"; coy:hasCountryLocation/rdfs:label \"Ukraine\"@en}"
+            }
+        },
+        {
+            "id": "33",
+            "question": [
+                {
+                    "string": "How many attacks happened in Kherson in 2022?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Attacken gab es 2022 in Cherson?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT (COUNT(DISTINCT ?attack) AS ?result) WHERE {?attack rdf:type coy:Attack; coy:hasLocation \"Kherson\"; coy:hasTimestamp ?ts. FILTER(YEAR(?ts)= 2022)}"
+            }
+        },
+        {
+            "id": "34",
+            "question": [
+                {
+                    "string": "Was Odesa attacked in 2020?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wurde Odessa in 2020 angegriffen?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {?result rdf:type coy:Conflict;  coy:hasLocation \"Odesa\"; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) = 2020)}"
+            }
+        },
+        {
+            "id": "35",
+            "question": [
+                {
+                    "string": "Were there military conflicts in Europe in 2021?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gab es in 2021 milit\u00e4rische Konflikte in Europa?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "ASK {?result rdf:type coy:ArmedClash; coy:hasCountryLocation/coy:hasContinent data:continent\\/Europe; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) = 2021)}"
+            }
+        },
+        {
+            "id": "36",
+            "question": [
+                {
+                    "string": "What are the indices of the 3 northernmost harbors in Europe?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie lauten die Indizes der drei n\u00f6rdlichsten H\u00e4fen in Europa?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE {?port rdf:type coy:Port; wpi:hasIndexNumber ?result; coy:hasLatitude ?lat; coy:hasLocation/coy:hasContinent data:continent\\/Europe.} ORDER BY DESC(?lat) LIMIT 3"
+            }
+        },
+        {
+            "id": "37",
+            "question": [
+                {
+                    "string": "Is there a UK company with more than 100,000 employees?",
+                    "language": "en"
+                },
+                {
+                    "string": "Gibt es in Gro\u00dfbritannien eine Firma mit mehr als 100.000 Mitarbeitern?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "ASK {?comp rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"United Kingdom\"@en; coy:hasNumberOfEmployees ?size. FILTER(xsd:integer(?size) >= 100000)}"
+            }
+        },
+        {
+            "id": "38",
+            "question": [
+                {
+                    "string": "What are the street adresses of companies in Germany with more than 100,000 employees?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie lauten die Adressen der Firmen in Deutschland mit mehr als 100.000 Mitarbeitern?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {?comp rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"Germany\"@en; coy:hasNumberOfEmployees ?size; coy:hasStreet ?result. FILTER(xsd:integer(?size) >= 100000)}"
+            }
+        },
+        {
+            "id": "39",
+            "question": [
+                {
+                    "string": "Which events involved chemical weapons since 2016?",
+                    "language": "en"
+                },
+                {
+                    "string": "In welchen Events wurden seit 2016 chemische Waffen eingesetzt?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {?result rdf:type coy:ChemicalWeapon; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) >= 2016)}"
+            }
+        },
+        {
+            "id": "40",
+            "question": [
+                {
+                    "string": "How many interventions against Russia are currently active?",
+                    "language": "en"
+                },
+                {
+                    "string": "Wie viele Interventionen richten sich aktuell gegen Russland?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT DISTINCT (COUNT (DISTINCT ?int) AS ?result) WHERE {?int rdf:type gta:Intervention; gta:hasAffectedJurisdiction/rdfs:label \"Russia\"@en}"
+            }
+        },
+        {
+            "id": "41",
+            "question": [
+                {
+                    "string": "What is Australia's most recent intervention against Russia?",
+                    "language": "en"
+                },
+                {
+                    "string": "Welches ist die aktuelleste Intervention von Australien gegen Russland?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT ?result WHERE {?result rdf:type gta:Intervention; gta:hasAffectedJurisdiction/rdfs:label \"Russia\"@en; gta:hasImplementingJurisdiction/rdfs:label \"Australia\"@en; gta:hasImplementationDate ?date.} ORDER BY DESC(?date) LIMIT 1"
+            }
+        },
+        {
+            "id": "42",
+            "question": [
+                {
+                    "string": "Which products are impacted by intervention 101975?",
+                    "language": "en"
+                },
+                {
+                    "string": "Welche Produkte sind von der Intervention 101975 betroffen?",
+                    "language": "de"
+                }
+            ],
+            "query": {
+                "answers": [],
+                "sparql": "SELECT DISTINCT ?result WHERE {?intervention rdf:type gta:Intervention; gta:hasInterventionId \"101975\"; gta:hasAffectedProduct ?result}"
             }
         }
     ]
