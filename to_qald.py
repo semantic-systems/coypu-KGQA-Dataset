@@ -6,7 +6,7 @@ from itertools import islice
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 endpoint = SPARQLWrapper("https://skynet.coypu.org/coypu-internal/")
-endpoint.setCredentials(user="", passwd = "")
+endpoint.setCredentials(user="katherine", passwd = "0CyivAlseo")
 
 prefixes = "PREFIX coy: <https://schema.coypu.org/global#> " + \
            "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> " + \
@@ -38,6 +38,7 @@ def main():
 
         question = {}
         question["id"] = str(idx)
+        question["answers"] = []
 
         q = []
         q_en, q_de = {}, {}
@@ -50,13 +51,12 @@ def main():
         question["question"] = q
 
         query = {}
-        query["answers"] = []
         query["sparql"] = prefixes + sparql
         endpoint.setQuery(query["sparql"])
         endpoint.setReturnFormat(JSON)
         result = endpoint.query().convert()
-        query["answers"].append(result)
 
+        question["answers"].append(result)
         question["query"] = query
         ds_questions["questions"].append(question)
 
