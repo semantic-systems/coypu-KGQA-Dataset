@@ -22,7 +22,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK { ?subject coy:hasLocation ?country; coy:hasInfrastructureType \"port\"; rdfs:label \"Tokyo\" . ?country rdf:type coy:Country; rdfs:label \"Japan\"@en.}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK { ?subject coy:hasLocation ?country; coy:hasInfrastructureType \"port\"; rdfs:label \"Tokyo\" . ?country rdf:type coy:Country; rdfs:label \"Japan\"@en.}"
             }
         },
         {
@@ -58,7 +58,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?port) AS ?result) WHERE {?port coy:hasLocation ?country ; coy:hasInfrastructureType \"port\" . ?country rdf:type coy:Country; skos:altLabel \"China\"@en}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?port) AS ?result) WHERE {?port coy:hasLocation ?country ; coy:hasInfrastructureType \"port\" . ?country rdf:type coy:Country; skos:altLabel \"China\"@en}"
             }
         },
         {
@@ -80,7 +80,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK {?result rdf:type coy:Disaster; coy:hasCountryLocation ?country; coy:hasStartDate ?sd. ?country rdfs:label \"Italy\"@en. FILTER(NOT EXISTS {?result coy:hasEndDate ?ed})} "
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK {?result rdf:type coy:Disaster; coy:hasCountryLocation ?country; coy:hasStartDate ?sd. ?country rdfs:label \"Italy\"@en. FILTER(NOT EXISTS {?result coy:hasEndDate ?ed})} "
             }
         },
         {
@@ -108,7 +108,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?subject rdf:type coy:Disaster; coy:hasEventType \"EQ\"; coy:hasCountryLocation ?country; coy:hasTimestamp ?result. ?country rdfs:label \"Indonesia\"@en} ORDER BY DESC(?result) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?subject rdf:type coy:Disaster; coy:hasEventType \"EQ\"; coy:hasCountryLocation ?country; coy:hasTimestamp ?result. ?country rdfs:label \"Indonesia\"@en} ORDER BY DESC(?result) LIMIT 1"
             }
         },
         {
@@ -136,7 +136,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {<https://data.coypu.org/country/SAU> coy:hasIso3Code ?result .}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {<https://data.coypu.org/country/SAU> coy:hasIso3Code ?result .}"
             }
         },
         {
@@ -164,7 +164,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?result rdf:type coy:Disaster; coy:hasAlertScore ?as; coy:hasTimestamp ?ts. FILTER(?as = \"2\")} ORDER BY DESC(?ts) LIMIT 3"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?result rdf:type coy:Disaster; coy:hasAlertScore ?as; coy:hasTimestamp ?ts. FILTER(?as = \"2\")} ORDER BY DESC(?ts) LIMIT 3"
             }
         },
         {
@@ -200,7 +200,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE {<https://data.coypu.org/country/DEU> coy:hasRiskLevel ?result .}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE {<https://data.coypu.org/country/DEU> coy:hasRiskLevel ?result .}"
             }
         },
         {
@@ -236,7 +236,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?dis) AS ?result) WHERE {?dis rdf:type coy:Disaster; coy:hasAlertScore ?as; coy:hasTimestamp ?ts. FILTER((YEAR(xsd:dateTime(?ts)) = 2021) && (?as = \"1\"))}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?dis) AS ?result) WHERE {?dis rdf:type coy:Disaster; coy:hasAlertScore ?as; coy:hasTimestamp ?ts. FILTER((YEAR(xsd:dateTime(?ts)) = 2021) && (?as = \"1\"))}"
             }
         },
         {
@@ -258,7 +258,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK{?ap rdf:type coy:Airport; coy:hasCountry \"Afghanistan\"; coy:hasName ?name. FILTER(regex(?name,\"Kandahar\", \"i\"))}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK{?ap rdf:type coy:Airport; coy:hasCountry \"Afghanistan\"; coy:hasName ?name. FILTER(regex(?name,\"Kandahar\", \"i\"))}"
             }
         },
         {
@@ -293,7 +293,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE{?ap rdf:type coy:Airport;  rdfs:label \"Los Angeles Intl\"; coy:hasId ?result. }"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE{?ap rdf:type coy:Airport;  rdfs:label \"Los Angeles Intl\"; coy:hasId ?result. }"
             }
         },
         {
@@ -329,7 +329,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?seaport) AS ?result) WHERE {?seaport rdf:type coy:Port; coy:hasLocation ?country. ?country coy:hasContinent data:continent\\/Europe. }"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?seaport) AS ?result) WHERE {?seaport rdf:type coy:Port; coy:hasLocation ?country. ?country coy:hasContinent data:continent\\/Europe. }"
             }
         },
         {
@@ -365,7 +365,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?pp rdf:type coy:Powerplant;  coy:hasCountryLocation/rdfs:label \"Japan\"@en; coy:hasCapacity ?result} ORDER BY DESC(?result) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?pp rdf:type coy:Powerplant;  coy:hasCountryLocation/rdfs:label \"Japan\"@en; coy:hasCapacity ?result} ORDER BY DESC(?result) LIMIT 1"
             }
         },
         {
@@ -393,7 +393,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?pp rdf:type coy:Powerplant;  coy:hasName \"HKW West\"; coy:hasFuelType ?result. }"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?pp rdf:type coy:Powerplant;  coy:hasName \"HKW West\"; coy:hasFuelType ?result. }"
             }
         },
         {
@@ -429,7 +429,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?pp) AS ?result) WHERE{?pp rdf:type coy:Powerplant; coy:hasFuelType \"Gas\"; coy:hasCountryLocation/rdfs:label \"India\"@en. }"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?pp) AS ?result) WHERE{?pp rdf:type coy:Powerplant; coy:hasFuelType \"Gas\"; coy:hasCountryLocation/rdfs:label \"India\"@en. }"
             }
         },
         {
@@ -464,7 +464,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?result rdf:type coy:Disaster; coy:hasStartDate ?sd; coy:hasCountryLocation/rdfs:label \"Switzerland\"@en.} ORDER BY DESC(?sd) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?result rdf:type coy:Disaster; coy:hasStartDate ?sd; coy:hasCountryLocation/rdfs:label \"Switzerland\"@en.} ORDER BY DESC(?sd) LIMIT 1"
             }
         },
         {
@@ -494,7 +494,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?dis ?ts ?ts2 WHERE{?dis rdf:type coy:Disaster; coy:hasCountryLocation/rdfs:label \"Japan\"@en; coy:hasTimestamp ?ts. BIND(xsd:date(?ts) AS ?eventDate)  FILTER(?eventDate = xsd:date(\"2021-01-01+00:00\"))}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?dis ?ts ?ts2 WHERE{?dis rdf:type coy:Disaster; coy:hasCountryLocation/rdfs:label \"Japan\"@en; coy:hasTimestamp ?ts. BIND(xsd:date(?ts) AS ?eventDate)  FILTER(?eventDate = xsd:date(\"2021-01-01+00:00\"))}"
             }
         },
         {
@@ -530,7 +530,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?comp) AS ?result) WHERE{?comp rdf:type coy:Company; coy:hasCity \"K\u00f6ln\"; coy:hasNumberOfEmployees ?size. FILTER(xsd:integer(?size) > 10000)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?comp) AS ?result) WHERE{?comp rdf:type coy:Company; coy:hasCity \"K\u00f6ln\"; coy:hasNumberOfEmployees ?size. FILTER(xsd:integer(?size) > 10000)}"
             }
         },
         {
@@ -552,7 +552,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK{{SELECT (COUNT (DISTINCT ?comp) AS ?small) WHERE{?comp rdf:type coy:Company; coy:hasCity \"M\u00fcnchen\"; coy:hasCompanySize ?size. FILTER(?size = \"SMALL\")}} {SELECT (COUNT (DISTINCT ?comp) AS ?micro) WHERE{?comp rdf:type coy:Company; coy:hasCity \"M\u00fcnchen\"; coy:hasCompanySize ?size. FILTER(?size = \"MICRO\")}} FILTER(?small > ?micro)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK{{SELECT (COUNT (DISTINCT ?comp) AS ?small) WHERE{?comp rdf:type coy:Company; coy:hasCity \"M\u00fcnchen\"; coy:hasCompanySize ?size. FILTER(?size = \"SMALL\")}} {SELECT (COUNT (DISTINCT ?comp) AS ?micro) WHERE{?comp rdf:type coy:Company; coy:hasCity \"M\u00fcnchen\"; coy:hasCompanySize ?size. FILTER(?size = \"MICRO\")}} FILTER(?small > ?micro)}"
             }
         },
         {
@@ -580,7 +580,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?comp rdf:type coy:Company; coy:hasCity \"Hamburg\"; coy:hasNumberOfEmployees ?size; coy:hasUrl ?result} ORDER BY DESC(xsd:integer(?size)) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?comp rdf:type coy:Company; coy:hasCity \"Hamburg\"; coy:hasNumberOfEmployees ?size; coy:hasUrl ?result} ORDER BY DESC(xsd:integer(?size)) LIMIT 1"
             }
         },
         {
@@ -608,7 +608,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?comp rdf:type coy:Company; coy:hasEbidCode ?result; coy:hasNumberOfEmployees ?size.  FILTER(xsd:integer(?size) > 100000)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?comp rdf:type coy:Company; coy:hasEbidCode ?result; coy:hasNumberOfEmployees ?size.  FILTER(xsd:integer(?size) > 100000)}"
             }
         },
         {
@@ -636,7 +636,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?comp rdfs:label \"Deutsche Bahn AG\"; coy:hasStreet ?result.}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?comp rdfs:label \"Deutsche Bahn AG\"; coy:hasStreet ?result.}"
             }
         },
         {
@@ -664,7 +664,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE{?result rdf:type coy:Company; coy:hasZip \"78604\".} "
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE{?result rdf:type coy:Company; coy:hasZip \"78604\".} "
             }
         },
         {
@@ -699,7 +699,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {{SELECT (SUM(xsd:float(?capS)) AS ?solarSum) WHERE{ ?solar rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Solar\"; coy:hasCapacity ?capS.}} {SELECT (SUM(xsd:float(?capH)) AS ?hydroSum) WHERE {?hydro rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Hydro\"; coy:hasCapacity ?capH. }} BIND(IF((?solarSum >= ?hydroSum), \"Solar\", \"Hydro\") AS ?result)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {{SELECT (SUM(xsd:float(?capS)) AS ?solarSum) WHERE{ ?solar rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Solar\"; coy:hasCapacity ?capS.}} {SELECT (SUM(xsd:float(?capH)) AS ?hydroSum) WHERE {?hydro rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Hydro\"; coy:hasCapacity ?capH. }} BIND(IF((?solarSum >= ?hydroSum), \"Solar\", \"Hydro\") AS ?result)}"
             }
         },
         {
@@ -735,7 +735,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?emergency) AS ?result) WHERE{ ?emergency rdf:type coy:Disaster; coy:hasTimestamp ?ts; coy:hasCountryLocation/rdfs:label \"Australia\"@en. FILTER(YEAR(xsd:dateTime(?ts)) >= 2022)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?emergency) AS ?result) WHERE{ ?emergency rdf:type coy:Disaster; coy:hasTimestamp ?ts; coy:hasCountryLocation/rdfs:label \"Australia\"@en. FILTER(YEAR(xsd:dateTime(?ts)) >= 2022)}"
             }
         },
         {
@@ -757,7 +757,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK{ ?emergency rdf:type coy:Disaster; coy:hasStartDate ?ts; coy:hasCountryLocation ?loc, ?loc2. ?loc rdf:type coy:Country; rdfs:label \"Germany\"@en. ?loc2 rdf:type coy:Country; skos:altLabel \"Netherlands\"@en. FILTER(YEAR(?ts) = 2021)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK{ ?emergency rdf:type coy:Disaster; coy:hasStartDate ?ts; coy:hasCountryLocation ?loc, ?loc2. ?loc rdf:type coy:Country; rdfs:label \"Germany\"@en. ?loc2 rdf:type coy:Country; skos:altLabel \"Netherlands\"@en. FILTER(YEAR(?ts) = 2021)}"
             }
         },
         {
@@ -785,7 +785,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Russia\"@en; coy:hasTimestamp ?result; coy:hasUrl ?url. FILTER(regex(?url, \"bloomberg.com\"))} ORDER BY DESC(?result) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Russia\"@en; coy:hasTimestamp ?result; coy:hasUrl ?url. FILTER(regex(?url, \"bloomberg.com\"))} ORDER BY DESC(?result) LIMIT 1"
             }
         },
         {
@@ -821,7 +821,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?micro) AS ?result) WHERE {?micro rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"Germany\"@en; coy:hasCompanySize \"MICRO\".}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?micro) AS ?result) WHERE {?micro rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"Germany\"@en; coy:hasCompanySize \"MICRO\".}"
             }
         },
         {
@@ -843,7 +843,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK {?comp rdf:type coy:Company; coy:hasStreet ?street. FILTER(regex(?street,\"Gotenstra\u00dfe\"))}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK {?comp rdf:type coy:Company; coy:hasStreet ?street. FILTER(regex(?street,\"Gotenstra\u00dfe\"))}"
             }
         },
         {
@@ -871,7 +871,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {?dis rdf:type coy:Disaster; coy:hasTimestamp ?ts; coy:hasCountryLocation/rdfs:label ?result. FILTER(YEAR(xsd:dateTime(?ts)) = 2021) } GROUP BY(?result) ORDER BY DESC(COUNT (DISTINCT ?dis)) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {?dis rdf:type coy:Disaster; coy:hasTimestamp ?ts; coy:hasCountryLocation/rdfs:label ?result. FILTER(YEAR(xsd:dateTime(?ts)) = 2021) } GROUP BY(?result) ORDER BY DESC(COUNT (DISTINCT ?dis)) LIMIT 1"
             }
         },
         {
@@ -899,7 +899,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Madagascar\"@en; coy:hasDescription ?result; coy:hasTimestamp ?ts.} ORDER BY DESC(xsd:dateTime(?ts)) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Madagascar\"@en; coy:hasDescription ?result; coy:hasTimestamp ?ts.} ORDER BY DESC(xsd:dateTime(?ts)) LIMIT 1"
             }
         },
         {
@@ -935,7 +935,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?news) AS ?result) WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Ukraine\"@en; coy:hasTimestamp ?ts. FILTER((YEAR(xsd:dateTime(?ts)) = 2022) && (MONTH(xsd:dateTime(?ts)) = 06))} "
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?news) AS ?result) WHERE {?news rdf:type coy:News; coy:hasCountryLocation/rdfs:label \"Ukraine\"@en; coy:hasTimestamp ?ts. FILTER((YEAR(xsd:dateTime(?ts)) = 2022) && (MONTH(xsd:dateTime(?ts)) = 06))} "
             }
         },
         {
@@ -971,7 +971,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT(DISTINCT ?event) AS ?result) WHERE {?event rdf:type coy:ChemicalWeapon; coy:hasIsoCode ?iso; coy:hasTimestamp ?ts. ?country rdf:type coy:Country; rdfs:label \"Brazil\"@en; coy:hasIso3Code ?iso. FILTER((YEAR(?ts) = 2022) && (MONTH(?ts) = 04))} "
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT(DISTINCT ?event) AS ?result) WHERE {?event rdf:type coy:ChemicalWeapon; coy:hasIsoCode ?iso; coy:hasTimestamp ?ts. ?country rdf:type coy:Country; rdfs:label \"Brazil\"@en; coy:hasIso3Code ?iso. FILTER((YEAR(?ts) = 2022) && (MONTH(?ts) = 04))} "
             }
         },
         {
@@ -1007,7 +1007,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT (DISTINCT ?pp) AS ?result) WHERE {?pp rdf:type coy:Powerplant; coy:hasFuelType \"Nuclear\"; coy:hasCountryLocation/rdfs:label \"Ukraine\"@en}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT (DISTINCT ?pp) AS ?result) WHERE {?pp rdf:type coy:Powerplant; coy:hasFuelType \"Nuclear\"; coy:hasCountryLocation/rdfs:label \"Ukraine\"@en}"
             }
         },
         {
@@ -1043,7 +1043,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT (COUNT(DISTINCT ?attack) AS ?result) WHERE {?attack rdf:type coy:Attack; coy:hasLocation \"Kherson\"; coy:hasTimestamp ?ts. FILTER(YEAR(?ts)= 2022)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT (COUNT(DISTINCT ?attack) AS ?result) WHERE {?attack rdf:type coy:Attack; coy:hasLocation \"Kherson\"; coy:hasTimestamp ?ts. FILTER(YEAR(?ts)= 2022)}"
             }
         },
         {
@@ -1588,7 +1588,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {?result rdf:type coy:Conflict;  coy:hasLocation \"Odesa\"; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) = 2020)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {?result rdf:type coy:Conflict;  coy:hasLocation \"Odesa\"; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) = 2020)}"
             }
         },
         {
@@ -1610,7 +1610,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK {?result rdf:type coy:ArmedClash; coy:hasCountryLocation/coy:hasContinent data:continent\\/Europe; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) = 2021)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK {?result rdf:type coy:ArmedClash; coy:hasCountryLocation/coy:hasContinent data:continent\\/Europe; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) = 2021)}"
             }
         },
         {
@@ -1660,7 +1660,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE {?port rdf:type coy:Port; wpi:hasIndexNumber ?result; coy:hasLatitude ?lat; coy:hasLocation/coy:hasContinent data:continent\\/Europe.} ORDER BY DESC(?lat) LIMIT 3"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE {?port rdf:type coy:Port; wpi:hasIndexNumber ?result; coy:hasLatitude ?lat; coy:hasLocation/coy:hasContinent data:continent\\/Europe.} ORDER BY DESC(?lat) LIMIT 3"
             }
         },
         {
@@ -1682,7 +1682,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>ASK {?comp rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"United Kingdom\"@en; coy:hasNumberOfEmployees ?size. FILTER(xsd:integer(?size) >= 100000)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> ASK {?comp rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"United Kingdom\"@en; coy:hasNumberOfEmployees ?size. FILTER(xsd:integer(?size) >= 100000)}"
             }
         },
         {
@@ -1710,7 +1710,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {?comp rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"Germany\"@en; coy:hasNumberOfEmployees ?size; coy:hasStreet ?result. FILTER(xsd:integer(?size) >= 100000)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {?comp rdf:type coy:Company; coy:hasCountryLocation/rdfs:label \"Germany\"@en; coy:hasNumberOfEmployees ?size; coy:hasStreet ?result. FILTER(xsd:integer(?size) >= 100000)}"
             }
         },
         {
@@ -2333,7 +2333,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {?result rdf:type coy:ChemicalWeapon; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) >= 2016)}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {?result rdf:type coy:ChemicalWeapon; coy:hasTimestamp ?ts. FILTER(YEAR(?ts) >= 2016)}"
             }
         },
         {
@@ -2369,7 +2369,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT (COUNT (DISTINCT ?int) AS ?result) WHERE {?int rdf:type gta:Intervention; gta:hasAffectedJurisdiction/rdfs:label \"Russia\"@en}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT (COUNT (DISTINCT ?int) AS ?result) WHERE {?int rdf:type gta:Intervention; gta:hasAffectedJurisdiction/rdfs:label \"Russia\"@en}"
             }
         },
         {
@@ -2404,7 +2404,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT ?result WHERE {?result rdf:type gta:Intervention; gta:hasAffectedJurisdiction/rdfs:label \"Russia\"@en; gta:hasImplementingJurisdiction/rdfs:label \"Australia\"@en; gta:hasImplementationDate ?date.} ORDER BY DESC(?date) LIMIT 1"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {?result rdf:type gta:Intervention; gta:hasAffectedJurisdiction/rdfs:label \"Russia\"@en; gta:hasImplementingJurisdiction/rdfs:label \"Australia\"@en; gta:hasImplementationDate ?date.} ORDER BY DESC(?date) LIMIT 1"
             }
         },
         {
@@ -2457,7 +2457,7 @@
                 }
             ],
             "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#>SELECT DISTINCT ?result WHERE {?intervention rdf:type gta:Intervention; gta:hasInterventionId \"101975\"; gta:hasAffectedProduct ?result}"
+                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT DISTINCT ?result WHERE {?intervention rdf:type gta:Intervention; gta:hasInterventionId \"101975\"; gta:hasAffectedProduct ?result}"
             }
         }
     ]

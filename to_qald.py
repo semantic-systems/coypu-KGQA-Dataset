@@ -6,7 +6,7 @@ from itertools import islice
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 endpoint = SPARQLWrapper("https://skynet.coypu.org/coypu-internal/")
-endpoint.setCredentials(user="", passwd = "")
+endpoint.setCredentials(user="", passwd="")
 
 prefixes = "PREFIX coy: <https://schema.coypu.org/global#> " + \
            "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> " + \
@@ -20,7 +20,7 @@ prefixes = "PREFIX coy: <https://schema.coypu.org/global#> " + \
            "PREFIX wd: <http://www.wikidata.org/entity/> " + \
            "PREFIX em: <https://schema.coypu.org/em-dat#> " + \
            "PREFIX schema: <http://schema.org/> " + \
-           "PREFIX gta:  <https://schema.coypu.org/gta#>"
+           "PREFIX gta:  <https://schema.coypu.org/gta#> "
 
 def main():
     ds_file = Path.cwd().joinpath("QA Questions CoyPu.xlsx")
