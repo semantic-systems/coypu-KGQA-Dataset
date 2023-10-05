@@ -688,41 +688,6 @@
                             {
                                 "result": {
                                     "type": "literal",
-                                    "value": "Hydro"
-                                }
-                            }
-                        ]
-                    }
-                }
-            ],
-            "question": [
-                {
-                    "string": "Can Afghanistan create more energy through hydropower or thorugh solar power?",
-                    "language": "en"
-                },
-                {
-                    "string": "Kann in Afghanistan mehr Energie aus Wasserkraft oder Solarkraft erzeugt werden?",
-                    "language": "de"
-                }
-            ],
-            "query": {
-                "sparql": "PREFIX coy: <https://schema.coypu.org/global#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX data: <https://data.coypu.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX geo: <http://www.opengis.net/ont/geosparql#> PREFIX wpi: <https://schema.coypu.org/world-port-index#> PREFIX wdt: <http://www.wikidata.org/prop/direct/> PREFIX wd: <http://www.wikidata.org/entity/> PREFIX em: <https://schema.coypu.org/em-dat#> PREFIX schema: <http://schema.org/> PREFIX gta:  <https://schema.coypu.org/gta#> SELECT ?result WHERE {{SELECT (SUM(xsd:float(?capS)) AS ?solarSum) WHERE{ ?solar rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Solar\"; coy:hasCapacity ?capS.}} {SELECT (SUM(xsd:float(?capH)) AS ?hydroSum) WHERE {?hydro rdf:type coy:Powerplant; coy:hasCountryLocation/rdfs:label \"Afghanistan\"@en; coy:hasFuelType \"Hydro\"; coy:hasCapacity ?capH. }} BIND(IF((?solarSum >= ?hydroSum), \"Solar\", \"Hydro\") AS ?result)}"
-            }
-        },
-        {
-            "id": "23",
-            "answers": [
-                {
-                    "head": {
-                        "vars": [
-                            "result"
-                        ]
-                    },
-                    "results": {
-                        "bindings": [
-                            {
-                                "result": {
-                                    "type": "literal",
                                     "datatype": "http://www.w3.org/2001/XMLSchema#integer",
                                     "value": "0"
                                 }
@@ -746,7 +711,7 @@
             }
         },
         {
-            "id": "24",
+            "id": "23",
             "answers": [
                 {
                     "head": {},
@@ -768,7 +733,7 @@
             }
         },
         {
-            "id": "25",
+            "id": "24",
             "answers": [
                 {
                     "head": {
@@ -796,7 +761,7 @@
             }
         },
         {
-            "id": "26",
+            "id": "25",
             "answers": [
                 {
                     "head": {
@@ -832,7 +797,7 @@
             }
         },
         {
-            "id": "27",
+            "id": "26",
             "answers": [
                 {
                     "head": {},
@@ -854,7 +819,7 @@
             }
         },
         {
-            "id": "28",
+            "id": "27",
             "answers": [
                 {
                     "head": {
@@ -882,7 +847,7 @@
             }
         },
         {
-            "id": "29",
+            "id": "28",
             "answers": [
                 {
                     "head": {
@@ -910,7 +875,7 @@
             }
         },
         {
-            "id": "30",
+            "id": "29",
             "answers": [
                 {
                     "head": {
@@ -946,7 +911,7 @@
             }
         },
         {
-            "id": "31",
+            "id": "30",
             "answers": [
                 {
                     "head": {
@@ -982,7 +947,7 @@
             }
         },
         {
-            "id": "32",
+            "id": "31",
             "answers": [
                 {
                     "head": {
@@ -1018,7 +983,7 @@
             }
         },
         {
-            "id": "33",
+            "id": "32",
             "answers": [
                 {
                     "head": {
@@ -1054,7 +1019,7 @@
             }
         },
         {
-            "id": "34",
+            "id": "33",
             "answers": [
                 {
                     "head": {
@@ -1082,7 +1047,7 @@
             }
         },
         {
-            "id": "35",
+            "id": "34",
             "answers": [
                 {
                     "head": {},
@@ -1104,7 +1069,7 @@
             }
         },
         {
-            "id": "36",
+            "id": "35",
             "answers": [
                 {
                     "head": {
@@ -1132,7 +1097,7 @@
             }
         },
         {
-            "id": "37",
+            "id": "36",
             "answers": [
                 {
                     "head": {},
@@ -1154,7 +1119,7 @@
             }
         },
         {
-            "id": "38",
+            "id": "37",
             "answers": [
                 {
                     "head": {
@@ -1182,7 +1147,7 @@
             }
         },
         {
-            "id": "39",
+            "id": "38",
             "answers": [
                 {
                     "head": {
@@ -1210,7 +1175,7 @@
             }
         },
         {
-            "id": "40",
+            "id": "39",
             "answers": [
                 {
                     "head": {
@@ -1246,7 +1211,7 @@
             }
         },
         {
-            "id": "41",
+            "id": "40",
             "answers": [
                 {
                     "head": {
@@ -1281,7 +1246,7 @@
             }
         },
         {
-            "id": "42",
+            "id": "41",
             "answers": [
                 {
                     "head": {
