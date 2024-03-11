@@ -1,0 +1,992 @@
+[
+    {
+        "id": "2000",
+        "question": [
+            {
+                "string": "How many airports are in the graph?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?airport) AS ?count) WHERE { ?airport a coy:Airport }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2001",
+        "question": [
+            {
+                "string": "What is the number of airports in the graph?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?airport) AS ?count) WHERE { ?airport a coy:Airport }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2002",
+        "question": [
+            {
+                "string": "What is the name of the port located at latitude 61.418333?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?portName WHERE { ?port coy:hasLatitude 61.418333 . ?port wpi:hasPortName ?portName }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2003",
+        "question": [
+            {
+                "string": "What is the port's name at a latitude of 61.418333?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?portName WHERE { ?port coy:hasLatitude 61.418333 . ?port wpi:hasPortName ?portName }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2004",
+        "question": [
+            {
+                "string": "What is the operating country of the port with the ID 'USETW'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?country WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"USETW\" . ?subject coy:hasLocation ?country . ?country rdf:type coy:Country.  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2005",
+        "question": [
+            {
+                "string": "What country is the operating country of the port that has the identification code 'USETW'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?country WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"USETW\" . ?subject coy:hasLocation ?country . ?country rdf:type coy:Country.  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2006",
+        "question": [
+            {
+                "string": "What is the longitude of the port with the ID 'USJNU'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?longitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"USJNU\" . ?subject coy:hasLongitude ?longitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2007",
+        "question": [
+            {
+                "string": "Find the longitude of the port identified as 'USJNU'.",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?longitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"USJNU\" . ?subject coy:hasLongitude ?longitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2008",
+        "question": [
+            {
+                "string": "What is the latitude of the airport with the ID 'KUF'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?latitude WHERE { ?subject coy:hasInfrastructureType \"airport\" . ?subject coy:hasId \"KUF\" . ?subject coy:hasLatitude ?latitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2009",
+        "question": [
+            {
+                "string": "What is the latitude of the port with the ID 'AUWMB'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?latitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"AUWMB\" . ?subject coy:hasLatitude ?latitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2010",
+        "question": [
+            {
+                "string": "What is the latitude of the port identified as 'AUWMB'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?latitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"AUWMB\" . ?subject coy:hasLatitude ?latitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2011",
+        "question": [
+            {
+                "string": "What is the longitude of the port with the label 'Sept Iles (Seven Is.)'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?longitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Sept Iles (Seven Is.)\" . ?subject coy:hasLongitude ?longitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2012",
+        "question": [
+            {
+                "string": "What is the longitude of the port called 'Sept Iles (Seven Is.)'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?longitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Sept Iles (Seven Is.)\" . ?subject coy:hasLongitude ?longitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2013",
+        "question": [
+            {
+                "string": "What is the crane availability at the port with the name 'Port Antonio'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Port Antonio\" . ?subject wpi:hasCranesMobile ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2014",
+        "question": [
+            {
+                "string": "What is the current availability of cranes at 'Port Antonio'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Port Antonio\" . ?subject wpi:hasCranesMobile ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2015",
+        "question": [
+            {
+                "string": "What is the crane availability at the port with the ID 'YENIS'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"YENIS\" . ?subject wpi:hasCranesFixed ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2016",
+        "question": [
+            {
+                "string": "What is the current availability status of cranes at the port identified as 'YENIS'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"YENIS\" . ?subject wpi:hasCranesFixed ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2017",
+        "question": [
+            {
+                "string": "What is the size class of the port with the name 'Porto Di Lido-Venezia'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?sizeClass WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Porto Di Lido-Venezia\" . ?subject wpi:hasPortSize ?sizeClass .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2018",
+        "question": [
+            {
+                "string": "What is the classification of the port named 'Porto Di Lido-Venezia' in terms of its size class?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?sizeClass WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Porto Di Lido-Venezia\" . ?subject wpi:hasPortSize ?sizeClass .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2019",
+        "question": [
+            {
+                "string": "What is the name of the port located at latitude 61.418333?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?portName WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject wpi:hasLatitude 61.418333 . ?subject wpi:hasPortName ?portName .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2020",
+        "question": [
+            {
+                "string": "What is the port's name at a latitude of 61.418333?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?portName WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject wpi:hasLatitude 61.418333 . ?subject wpi:hasPortName ?portName .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2021",
+        "question": [
+            {
+                "string": "What is the US representative status of the port with the ID 'BRITJ'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?usRepresentative WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"BRITJ\" . ?subject wpi:isUSRepresentative ?usRepresentative .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2022",
+        "question": [
+            {
+                "string": "What is the current status of the representative from the United States for the port identified as 'BRITJ'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?usRepresentative WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"BRITJ\" . ?subject wpi:isUSRepresentative ?usRepresentative .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2023",
+        "question": [
+            {
+                "string": "What is the size of the dry dock at the port with the label 'Marstal'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?dryDockSize WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Marstal\" . ?subject wpi:hasDryDock ?dryDockSize .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2024",
+        "question": [
+            {
+                "string": "What is the dimension of the dry dock located at the port called 'Marstal'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?dryDockSize WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Marstal\" . ?subject wpi:hasDryDock ?dryDockSize .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2025",
+        "question": [
+            {
+                "string": "How many coastal ports are in the graph?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port a wpi:CoastalPort }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2026",
+        "question": [
+            {
+                "string": "How many ports located along the coast are present in the graph?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port a wpi:CoastalPort }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2027",
+        "question": [
+            {
+                "string": "What is the crane availability at the port with the name 'Nuuk'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Nuuk\" . ?subject wpi:hasCranesMobile ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2028",
+        "question": [
+            {
+                "string": "What is the current availability of cranes at the port called 'Nuuk'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Nuuk\" . ?subject wpi:hasCranesMobile ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2029",
+        "question": [
+            {
+                "string": "What is the shelter class of the port with the name 'Venice'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?shelter WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Venice\" . ?subject wpi:hasShelter ?shelter .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2030",
+        "question": [
+            {
+                "string": "What is the shelter category of the port named 'Venice'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?shelter WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Venice\" . ?subject wpi:hasShelter ?shelter .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2031",
+        "question": [
+            {
+                "string": "What is the size class of the port with the label 'Juneau'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?sizeClass WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Juneau\" . ?subject wpi:hasPortSize ?sizeClass .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2032",
+        "question": [
+            {
+                "string": "What is the class size of the port named 'Juneau'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?sizeClass WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Juneau\" . ?subject wpi:hasPortSize ?sizeClass .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2033",
+        "question": [
+            {
+                "string": "What is the crane availability at the port with the ID 'JPFSK'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"JPFSK\" . ?subject wpi:hasCranesMobile ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2034",
+        "question": [
+            {
+                "string": "What is the current availability of cranes at the port with the identifier 'JPFSK'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?cranes WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"JPFSK\" . ?subject wpi:hasCranesMobile ?cranes .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2035",
+        "question": [
+            {
+                "string": "Is there any port with 'Nishtun' as the label?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?port rdfs:label 'Nishtun' . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2036",
+        "question": [
+            {
+                "string": "Is there a port called Nishtun?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?port rdfs:label 'Nishtun' . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2037",
+        "question": [
+            {
+                "string": "How many ports are on a coast?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port a wpi:CoastalNaturalPort . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2038",
+        "question": [
+            {
+                "string": "How many ports are classified as Coastal Natural Ports?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port a wpi:CoastalNaturalPort . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2039",
+        "question": [
+            {
+                "string": "Does Russia have ports?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK { ?subject coy:hasLocation ?country . ?subject coy:hasInfrastructureType \"port\" . ?country rdf:type coy:Country . ?country rdfs:label \"Russia\"@en . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2040",
+        "question": [
+            {
+                "string": "Is there any port in Russia?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK { ?subject coy:hasLocation ?country . ?subject coy:hasInfrastructureType \"port\" . ?country rdf:type coy:Country . ?country rdfs:label \"Russia\"@en . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2041",
+        "question": [
+            {
+                "string": "How many ports provide supplies of diesel oil?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesDieselOil true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2042",
+        "question": [
+            {
+                "string": "How many ports provide diesel?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesDieselOil true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2043",
+        "question": [
+            {
+                "string": "Which port has the index number '1955'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?port WHERE { ?port wpi:hasIndexNumber '1955'^^xsd:long . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2044",
+        "question": [
+            {
+                "string": "What is the name of the port with index 1955?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?port WHERE { ?port wpi:hasIndexNumber '1955'^^xsd:long . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2045",
+        "question": [
+            {
+                "string": "Is there any airport with a total seat count of over 500 million per year?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?airport coy:hasTotalSeatsPerYear ?seats FILTER ( ?seats > 500000000 ) . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2046",
+        "question": [
+            {
+                "string": "Is there any port with the label 'Warrnambool'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?port rdfs:label 'Warrnambool' . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2047",
+        "question": [
+            {
+                "string": "Is there a port called 'Warrnambool'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?port rdfs:label 'Warrnambool' . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2048",
+        "question": [
+            {
+                "string": "How many ports require 'pilotage compulsory'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:isPilotageCompulsory true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2049",
+        "question": [
+            {
+                "string": "How many ports have a mandatory requirement for pilotage?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:isPilotageCompulsory true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2050",
+        "question": [
+            {
+                "string": "How many ports require 'pilotage compulsory'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:isPilotageCompulsory true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2051",
+        "question": [
+            {
+                "string": "How many ports have a mandatory requirement for pilotage?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:isPilotageCompulsory true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2052",
+        "question": [
+            {
+                "string": "How many ports have 'provisions' supplies available?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesProvisions true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2053",
+        "question": [
+            {
+                "string": "How many ports have available supplies of 'provisions'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesProvisions true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2054",
+        "question": [
+            {
+                "string": "How many ports have 'good holding ground'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasGoodHoldingGround true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2055",
+        "question": [
+            {
+                "string": "How many ports have favorable anchoring conditions?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasGoodHoldingGround true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2056",
+        "question": [
+            {
+                "string": "What is the index number of the port with 'Marine Railway Class M'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?indexNumber WHERE { ?port wpi:hasRailway wpi:MarineRailwaySizeClass:M . ?port wpi:hasIndexNumber ?indexNumber . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2057",
+        "question": [
+            {
+                "string": "What is the index of the port that has the class 'Marine Railway Class M'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?indexNumber WHERE { ?port wpi:hasRailway wpi:MarineRailwaySizeClass:M . ?port wpi:hasIndexNumber ?indexNumber . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2058",
+        "question": [
+            {
+                "string": "How many ports require 'Tide restriction'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasEntranceRestrictionTide true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2059",
+        "question": [
+            {
+                "string": "How many ports have restrictions on the use of Tide?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasEntranceRestrictionTide true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2060",
+        "question": [
+            {
+                "string": "How many ports have 'fuel oil' supplies available?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesFuelOil true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2061",
+        "question": [
+            {
+                "string": "How many ports offer supplies of 'fuel oil'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesFuelOil true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2062",
+        "question": [
+            {
+                "string": "How many ports have 'supplies water' available?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesWater true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2063",
+        "question": [
+            {
+                "string": "How many ports have the availability of water supplies?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesWater true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2064",
+        "question": [
+            {
+                "string": "How many ports have 'shelter class G'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasShelter wpi:ShelterClass:G . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "2065",
+        "question": [
+            {
+                "string": "How many ports possess a 'shelter class G'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasShelter wpi:ShelterClass:G . }"
+        },
+        "answers": [
+            ""
+        ]
+    }
+]

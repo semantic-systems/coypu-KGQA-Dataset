@@ -1,0 +1,362 @@
+[
+    {
+        "id": "3000",
+        "question": [
+            {
+                "string": "What is the longitude of the port with the ID 'USJNU'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?longitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"USJNU\" . ?subject coy:hasLongitude ?longitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3001",
+        "question": [
+            {
+                "string": "Find the longitude of the port identified as 'USJNU'.",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?longitude WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"USJNU\" . ?subject coy:hasLongitude ?longitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3002",
+        "question": [
+            {
+                "string": "What is the operating country of the port with the ID 'BRITJ'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?country WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"BRITJ\" . ?subject coy:hasLocation ?country . ?country rdf:type coy:Country.  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3003",
+        "question": [
+            {
+                "string": "What is the country where the port with the identification code 'BRITJ' is located?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?country WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasId \"BRITJ\" . ?subject coy:hasLocation ?country . ?country rdf:type coy:Country.  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3004",
+        "question": [
+            {
+                "string": "How many ports are located in Italy?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasLocation ?country . ?country rdf:type coy:Country. ?country rdfs:label \"Italy\"@en . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3005",
+        "question": [
+            {
+                "string": "What is the number of ports in Italy?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject coy:hasLocation ?country . ?country rdf:type coy:Country. ?country rdfs:label \"Italy\"@en . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3006",
+        "question": [
+            {
+                "string": "What is the total number of seats per year at the airport with the ID 'SKD'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?seats WHERE { ?subject coy:hasInfrastructureType \"airport\" . ?subject coy:hasId \"SKD\" . ?subject coy:hasTotalSeatsPerYear ?seats . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3007",
+        "question": [
+            {
+                "string": "How many seats are available annually at the airport identified as 'SKD'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?seats WHERE { ?subject coy:hasInfrastructureType \"airport\" . ?subject coy:hasId \"SKD\" . ?subject coy:hasTotalSeatsPerYear ?seats . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3008",
+        "question": [
+            {
+                "string": "What is the size class of the port with the label 'Juneau'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?sizeClass WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Juneau\" . ?subject wpi:hasPortSize ?sizeClass . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3009",
+        "question": [
+            {
+                "string": "What is the size category of the port labeled as 'Juneau'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?sizeClass WHERE { ?subject coy:hasInfrastructureType \"port\" . ?subject rdfs:label \"Juneau\" . ?subject wpi:hasPortSize ?sizeClass . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3010",
+        "question": [
+            {
+                "string": "What is the latitude of the port with the ID 'AUDKB'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?latitude WHERE { ?subject coy:hasInfrastructureType \"airport\" . ?subject coy:hasId \"AUDKB\" . ?subject coy:hasLatitude ?latitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3011",
+        "question": [
+            {
+                "string": "What is the latitude of the port identified as 'AUDKB'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT ?latitude WHERE { ?subject coy:hasInfrastructureType \"airport\" . ?subject coy:hasId \"AUDKB\" . ?subject coy:hasLatitude ?latitude .  }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3012",
+        "question": [
+            {
+                "string": "How many ports have 'fuel oil' supplies available?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesFuelOil true }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3013",
+        "question": [
+            {
+                "string": "How many ports offer supplies of 'fuel oil'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesFuelOil true }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3014",
+        "question": [
+            {
+                "string": "How many ports have 'provisions' supplies available?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesProvisions true }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3015",
+        "question": [
+            {
+                "string": "How many ports have available supplies of 'provisions'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasSuppliesProvisions true }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3016",
+        "question": [
+            {
+                "string": "How many ports require 'Tide restriction'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasEntranceRestrictionTide true }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3017",
+        "question": [
+            {
+                "string": "How many ports have restrictions on the use of Tide?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasEntranceRestrictionTide true }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3018",
+        "question": [
+            {
+                "string": "Is there a port with the port name 'Fushiki'?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?port wpi:hasPortName 'Fushiki'^^xsd:string . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3019",
+        "question": [
+            {
+                "string": "Is there a port called Fushiki?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?port wpi:hasPortName 'Fushiki'^^xsd:string . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3020",
+        "question": [
+            {
+                "string": "Is CASEI a coastal port?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?subject coy:hasId \"CASEI\" . ?subject a wpi:CoastalPort . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3021",
+        "question": [
+            {
+                "string": "Is the port with id 'CASEI' a coastal port?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "ASK WHERE { ?subject coy:hasId \"CASEI\" . ?subject a wpi:CoastalPort . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3022",
+        "question": [
+            {
+                "string": "How many ports have mobile cranes?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?port) AS ?count) WHERE { ?port wpi:hasCranesMobile true . }"
+        },
+        "answers": [
+            ""
+        ]
+    },
+    {
+        "id": "3023",
+        "question": [
+            {
+                "string": "How many airports have a latitude below 40 degrees?",
+                "language": "en"
+            }
+        ],
+        "query": {
+            "sparql": "SELECT (COUNT(?airport) AS ?count) WHERE { ?airport coy:hasLatitude ?latitude . FILTER(?latitude < 40) }"
+        },
+        "answers": [
+            ""
+        ]
+    }
+]
